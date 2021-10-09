@@ -3,6 +3,15 @@
 The repository contains C++ implementation of OHIE. 
 The technical aspects of the approach are described in [our paper](https://arxiv.org/pdf/1811.12628.pdf). 
 
+## What's New
+The code here is tested in Ubuntu 20.04 with Boost version 1.67 and Openssl version 1.1.1f. Take care when install these libararies.
+
+Makefile has been changed a lot, a seperated complier and link is nessary or to get multi-define error which hard to deal with. A clean and delete target is made for better use.
+
+`quicktest.sh` is not recommanded, a restart of it can't kill the one is running and leaves a lot of processing in `ps` list.
+
+The Following is the origin README, That's all and Good Luck.
+
 ## Dependencies
 
 The code has been tested on Ubuntu 16.04 with Boost ASIO library installed:

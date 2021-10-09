@@ -175,6 +175,7 @@ tcp_server::tcp_server(boost::asio::io_service& io_service, string ip, uint32_t 
 : acceptor_(io_service, tcp::endpoint(tcp::v4(), port)), my_ip(ip), my_port(port), t(new boost::asio::deadline_timer(io_service)), 
   last_ask_for_incomplete(0), last_print_blockchain(0), last_update_commited(0), bytes_received(0), bytes_txs_received(0), folder_blockchain(string(FOLDER_BLOCKCHAIN))
 {
+    cout << "start tcp server" << endl;
     start_accept();
 
     if ( PING_REPEAT > 0){
@@ -183,7 +184,7 @@ tcp_server::tcp_server(boost::asio::io_service& io_service, string ip, uint32_t 
       next_ping = time_of_now + PING_MIN_WAIT +  (rng() % (PING_MAX_WAIT-PING_MIN_WAIT) );
     }
 
-
+    cout << "Tcp server start ends" << endl;
 }
 
 int tcp_server::no_peers()

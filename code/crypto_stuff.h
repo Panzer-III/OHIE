@@ -8,6 +8,7 @@
 #include <fstream>
 #include <iomanip>
 
+#include <openssl/bn.h>
 #include <openssl/bio.h>
 #include <openssl/err.h>
 #include <openssl/ec.h>

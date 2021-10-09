@@ -747,7 +747,9 @@ bool Blockchain::add_block_by_parent_hash_and_chain_id( BlockHash parent_hash, B
 	if( NULL != bz ){
 		this->deepest[chain_id] = bz;
 		bz->nb = new network_block(nb);
+		return true;
 	}
+	return false;
 
 }
 
